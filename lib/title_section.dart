@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:stateful_test/FavoriteWidget.dart';
 
 class TitleSection extends StatelessWidget {
-  const TitleSection({
+  TitleSection({
     super.key,
     required this.name,
     required this.location,
@@ -9,6 +10,7 @@ class TitleSection extends StatelessWidget {
 
   final String name;
   final String location;
+  FavoriteWidget favoriteWidget = FavoriteWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -41,11 +43,8 @@ class TitleSection extends StatelessWidget {
             ),
           ),
           /*3*/
-          Icon(
-            Icons.star,
-            color: Colors.red[500],
-          ),
-          const Text('41'),
+
+          favoriteWidget,
         ],
       ),
     );

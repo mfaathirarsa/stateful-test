@@ -6,12 +6,12 @@ import 'package:stateful_test/title_section.dart';
 import 'image_section.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(MainApp());
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
+  MainApp({super.key});
+  TitleSection titleSection = TitleSection(name: 'Title', location: 'Jakarta');
   @override
   Widget build(BuildContext context) {
     const String demo = 'Demo';
@@ -19,14 +19,14 @@ class MainApp extends StatelessWidget {
       title: demo,
       home: Scaffold(
         appBar: AppBar(title: const Text(demo)),
-        body: const SingleChildScrollView(
+        body: SingleChildScrollView(
           child: Column(
             children: [
-              ImageSection(
+              const ImageSection(
                 image: 'images/lake.jpg',
               ),
-              TitleSection(name: 'Title', location: 'Jakarta'),
-              ButtonSection(),
+              titleSection,
+              const ButtonSection(),
               TextSection(
                 description:
                 'Lake Oeschinen lies at the foot of the Blüemlisalp in the '
@@ -36,6 +36,7 @@ class MainApp extends StatelessWidget {
                     'and pine forest, leads you to the lake, which warms to 20 '
                     'degrees Celsius in the summer. Activities enjoyed here '
                     'include rowing, and riding the summer toboggan run.',
+                clickCounter: titleSection.favoriteWidget.favoriteCount,
               ),
             ],
           ),

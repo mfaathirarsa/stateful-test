@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-typedef void IntCallback(int id);
 class FavoriteWidget extends StatefulWidget {
   bool isFavorited = true;
   int favoriteCount = 41;
+  //ValueChanged<bool> onFavoriteChanged;
   FavoriteWidget({super.key});
+
   @override
   State<FavoriteWidget> createState() => _FavoriteWidgetState();
 }

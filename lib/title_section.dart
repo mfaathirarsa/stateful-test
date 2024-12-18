@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stateful_test/FavoriteWidget.dart';
+import 'package:stateful_test/favorite_widget.dart';
 
 class TitleSection extends StatelessWidget {
   TitleSection({

@@ -17,11 +17,11 @@ class _TextSection extends State<TextSection>{
   String _description="";
   @override
   Widget build(BuildContext context) {
-    String _description=widget.description + widget.clickCounter.toString();
+    String description=widget.description + widget.clickCounter.toString();
     return Padding(
       padding: const EdgeInsets.all(32),
       child: Text(
-        _description,
+        description,
         softWrap: true,
       ),
     );
